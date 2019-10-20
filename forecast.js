@@ -1,5 +1,5 @@
 
-const key = 'GCzHJ2aFcmGt3uITF6bhtA9dJ9xDGHeL ';
+const key = 'SZZfyNpPYleXDAa2HuQzAqfFx3owvR5m ';
 
 //get weather info
 const getWeather = async (id) => {
@@ -24,5 +24,4 @@ const getCity = async (city) => {
 
   return data[0];
 };
-
 

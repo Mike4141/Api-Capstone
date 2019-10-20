@@ -6,15 +6,24 @@ const details = document.querySelector('.details');
 const time = document.querySelector('img.time');
 const icon = document.querySelector('.icon img');
 
+
+
+
 const updateUI =(data) => {
+  if(data == null){
+  return
+} 
+
+
 
   console.log(data);
   const cityDets = data.cityDets;
   const weather = data.weather;
 
+
   //update details template
   details.innerHTML =` 
-  <h5 class="my-3">${cityDets.EnglishName}</h5>
+  <h5 class="my-3">${cityDets.LocalizedName}</h5>
   <div class="my-3">${weather.WeatherText}</div>
   <div class="display-4 my-4">
     <span>${weather.Temperature.Metric.Value}</span>
@@ -47,13 +56,19 @@ time.setAttribute('src', timeSrc);
 const updateCity = async (city) => {
 
   const cityDets = await getCity(city);
+  if(cityDets == null){
+    console.log('No value')
+    return
+  } 
   const weather = await getWeather(cityDets.Key);
+
+    
 
   return {
     cityDets: cityDets,
     weather: weather
   };
-
+   
 };
 
 cityForm.addEventListener('submit', e => {
