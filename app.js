@@ -57,7 +57,7 @@ const updateCity = async (city) => {
 
   const cityDets = await getCity(city);
   if(cityDets == null){
-    console.log('No value')
+    console.log('No Results')
     return
   } 
   const weather = await getWeather(cityDets.Key);
