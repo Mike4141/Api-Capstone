@@ -15,33 +15,41 @@
 
 <body>
     <div class="container my-5 mx-auto">
-        <h1 class="text-muted text-center my-4">Weather Ninja</h1>
-        <form class="change-location my-4 text-center text-muted">
-            <label for="city">Enter a location for weather information</label>
-            <input type="text" name="city" class="form-control p-4">
+        <h1 class="color text-center my-4">Weather Ninja</h1>
+        <form class="change-location my-4 text-center ">
+            <label for="city" class="color2">Enter a location for weather information</label>
+            <input type="text" name="city" class="form-control " required>
+            <button type='submit'>Get Weather</button>
+            <p class='d-none marg' id='results-msg'>There are no results :(</p>
+
         </form>
 
+        
+        <section>
+            <div class="card shadow-lg rounded d-none ">
+                <img src="https://via.placeholder.com/400x300" class="time card-img-top" alt="place-holder">
+                <div class="icon bg-light mx-auto text-center">
+                    <img src="" alt="results">
+                </div>
 
-        <div class="card shadow-lg rounded d-none ">
-            <img src="https://via.placeholder.com/400x300" class="time card-img-top" alt="place-holder">
-            <div class="icon bg-light mx-auto text-center">
-                <img src="" alt="results">
-            </div>
+                <div class="text-muted text-uppercase text-center details">
+                    <h5 class="my-3">City name</h5>
+                    <div class="my-3">Weather condition</div>
 
-            <div class="text-muted text-uppercase text-center details">
-                <h5 class="my-3">City name</h5>
-                <div class="my-3">Weather condition</div>
-                <div class="display-4 my-4">
-                    <span>temp</span>
-                    <span>&deg;C</span>
+                    <div class="display-4 my-4">
+                        <span>temp</span>
+                        <span>&deg;C</span>
+
+                    </div>
 
                 </div>
 
             </div>
 
-        </div>
+        </section>
 
     </div>
+
 
 
 

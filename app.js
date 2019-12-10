@@ -25,7 +25,7 @@ const updateUI =(data) => {
   details.innerHTML =` 
   <h5 class="my-3">${cityDets.LocalizedName}</h5>
   <div class="my-3">${weather.WeatherText}</div>
-  <div class="display-4 my-4">
+  <p class="display-4 my-4">
     <span>${weather.Temperature.Metric.Value}</span>
     <span>&deg;C</span>
   </div> 
@@ -44,23 +44,24 @@ if(weather.IsDayTime){
 time.setAttribute('src', timeSrc);
 
 
-
   //remove d-none class if present
   if(card.classList.contains('d-none')){
     card.classList.remove('d-none');
   }
 
-
 };
 
 const updateCity = async (city) => {
-
+  const msg = document.getElementById('results-msg');
+  msg.classList.add('d-none');
   const cityDets = await getCity(city);
   if(cityDets == null){
     console.log('No Results')
+    msg.classList.remove('d-none');
     return
   } 
   const weather = await getWeather(cityDets.Key);
+
 
     
 
@@ -85,3 +86,4 @@ cityForm.addEventListener('submit', e => {
   .catch(err => console.log(err));
 
 });
+

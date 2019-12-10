@@ -2,10 +2,52 @@ body{
     background: #ffffff88;
     letter-spacing: 0.2em;
     font-size: 0.8em;
+    background: url(https://tf-assets-prod.s3.amazonaws.com/tf-curric/WEB-DEV-001/2.4.3_the_position_property/outerspace_landscape.jpeg) no-repeat;
+    background-size: cover;
   }
+  
   
   .container{
     max-width: 400px;
+  }
+
+  .color {
+    color: rgb(243, 243, 243);
+  }
+
+  .control {
+  display: block;
+  width: 100%;
+  height: auto;
+  font-size: 18px;
+  text-align: left;
+  padding: 15px;
+  border: 2px solid #e7e7e7;
+  border-radius: 3px;
+  background: #fcfcfc;
+  margin: 10px auto 20px;
+  transition: opacity 0.4s;
+}
+  
+
+  .marg {
+    margin: 30px;
+    padding: px;
+    height: auto;
+    font-family: 'Mansalva', cursive;
+    font-size: 30px;
+    color: rgb(161, 119, 26);
+    background: rgb(18, 4, 95);
+    border-radius: 10px;
+
+
+  }
+  
+
+  
+
+  .color2{
+    color: goldenrod;
   }
 
   .icon {
@@ -23,5 +65,37 @@ body{
   }
 
   label {
-      font-size: 15px;
+      font-size: 20px;
+  }
+
+  
+  button {
+    margin-top:20px;
+    height: auto;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    color:black;
+    background: rgb(231, 164, 19);
+    border: 0;
+    cursor: pointer;
+    margin-bottom: 0;
+    border-radius:10px;
+    padding: 10px 20px;
+
+
+  }
+  
+  
+  button:hover:enabled,
+  button:focus:enabled{
+    background-color: rgb(235, 90, 22);
+    -webkit-transition: background 0.1s;
+    -moz-transition: background 0.1s;
+    -o-transition: background 0.1s;
+    transition: background 0.1s;
+  }
+
+  .hidden {
+    display: none;
   }
